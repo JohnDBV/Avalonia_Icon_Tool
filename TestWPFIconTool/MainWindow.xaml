@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Row="0" Grid.Column="0" LastChildFill="True">
+            <TextBlock Text="Items to add :" Margin="10,10,10,0"/>
+            <ListView x:Name="listView" />
+        </DockPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" >
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,10,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button x:Name="btnAddPicture" Content="Add Picture..." Width="90" Height="30" VerticalAlignment="Center" Click="btnAddPicture_Click"></Button>
+            <Button x:Name="btnSave" Content="Save Icon File..." Width="90" Height="30" VerticalAlignment="Center" Click="btnSave_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>
