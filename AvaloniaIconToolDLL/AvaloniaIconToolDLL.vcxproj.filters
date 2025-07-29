@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="DiLib">
+      <UniqueIdentifier>{e0e5b732-c4e5-49e3-80a3-2a50f5ccc95d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AvaloniaIconToolDLL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\Di.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiBinaryFile.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiBmpImage.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiFile.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiFileInfo.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiFileInternal.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiIconFile.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiImageInternal.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiInternal.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiPngImage.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiTestClass.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\DiTextFile.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DiLib\IGenericImage.cpp">
+      <Filter>DiLib</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandLineArguments.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DiLib\coding_conventions.md">
+      <Filter>DiLib</Filter>
+    </None>
+    <None Include="DiLib\DiLib.vcxproj">
+      <Filter>DiLib</Filter>
+    </None>
+    <None Include="DiLib\DiLib.vcxproj.filters">
+      <Filter>DiLib</Filter>
+    </None>
+    <None Include="DiLib\DiLib.vcxproj.user">
+      <Filter>DiLib</Filter>
+    </None>
+    <None Include="DiLib\LICENSE">
+      <Filter>DiLib</Filter>
+    </None>
+    <None Include="DiLib\readme.md">
+      <Filter>DiLib</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DiLib\Di.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiBinaryFile.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiBmpImage.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiFile.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiFileInfo.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiFileInternal.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiIconFile.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiImageInternal.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiInternal.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiPngImage.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiTestClass.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\DiTextFile.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DiLib\IGenericImage.h">
+      <Filter>DiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineArguments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleIconFilePng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

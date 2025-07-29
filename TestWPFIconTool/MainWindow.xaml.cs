@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Runtime.InteropServices;
+using System.Collections.Generic;
 
 namespace TestWPFIconTool
 {
@@ -20,6 +22,9 @@ namespace TestWPFIconTool
     public partial class MainWindow : Window
     {
         internal ObservableCollection<LocalImagePathAndInfo> LocalImagesList { get; set; }
+
+        [DllImport("AvaloniaIconToolDLL.dll", CallingConvention =CallingConvention.StdCall)]
+        private static extern int WriteIconFile(int argc, string[] args);
 
         public MainWindow()
         {
@@ -71,6 +76,19 @@ namespace TestWPFIconTool
                     MessageBox.Show("Export(C++ side)!\nOutput file :\n" + sfd.FileName);
 
                     //todo : Call C++ code
+                    
+                    //Step 1 : Re-do a console c++ command line arguments list
+                    List<string> paramsList = new List<string>();
+
+                    paramsList.Add(System.Environment.ProcessPath);
+                    paramsList.Add("pack");
+                    paramsList.Add(sfd.FileName);
+
+                    foreach (var item in LocalImagesList)
+                        paramsList.Add(item.ImagePath);
+
+                    //Step 2 : Export using C++
+                    int result = WriteIconFile(paramsList.Count, paramsList.ToArray());
 
                     MessageBox.Show("Export complete !");
                 }
