@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AvaloniaIconTool\AvaloniaIconTool.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy $(SolutionDir)CppBuild $(SolutionDir)AvaloniaIconTool.Browser\bin\$(Configuration)\net9.0\publish\wwwroot /s /y" />
+  </Target>
+</Project>

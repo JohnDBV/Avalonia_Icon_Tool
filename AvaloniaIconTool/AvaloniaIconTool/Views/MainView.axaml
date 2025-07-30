@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaIconTool.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaIconTool.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="140"/>
+		</Grid.ColumnDefinitions>
+		<DockPanel Grid.Row="0" Grid.Column="0" LastChildFill="True">
+			<TextBlock Text="Items to add :" Margin="10,10,10,0"/>
+			<ListBox x:Name="listView" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+		</DockPanel>
+		<StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" >
+			<Button x:Name="btnAddPicture" Content="Add Picture..." Width="120" Height="30" Margin="10,0,0,0" VerticalAlignment="Center" Click="btnAddPicture_Click"></Button>
+			<Button x:Name="btnSave" Content="Save Icon File..." Width="120" Height="30" Margin="10,0,0,0" VerticalAlignment="Center" Click="btnSavePicture_Click"></Button>
+		</StackPanel>
+	</Grid>
+</UserControl>
