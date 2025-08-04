@@ -15,5 +15,5 @@ jobs :
               with:
                 dotnet-version: 9.0.x
             
-            - name: Install dependencies
-              run: dotnet restore
+            - name: Install dependencies for Desktop version
+              run: dotnet restore ./AvaloniaIconTool/AvaloniaIconTool.Desktop/AvaloniaIconTool.Desktop.csproj
