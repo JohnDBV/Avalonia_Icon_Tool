@@ -19,10 +19,13 @@ jobs :
               run: dotnet restore ./AvaloniaIconTool/AvaloniaIconTool.Desktop/AvaloniaIconTool.Desktop.csproj
 
             - name: Build the Avalonia Windows project
-              run: dotnet build ./AvaloniaIconTool/AvaloniaIconTool.Desktop/AvaloniaIconTool.Desktop.csproj --configuration Debug --arch x64 --output .\Build\Win64
+              run: dotnet build ./AvaloniaIconTool/AvaloniaIconTool.Desktop/AvaloniaIconTool.Desktop.csproj --configuration Debug --arch x64 --output ./Build/Win64
 
             - name: Add MSBuild to PATH
               uses: microsoft/setup-msbuild@v2
             
             - name: Build C++ binaries for Debug
               run: msbuild ./AvaloniaIconToolDLL/AvaloniaIconToolDLL.vcxproj /p:configuration=debug /p:platform=x64
+
+            - name: Copy C++ binaries to C# Output folder
+              run : Copy-Item -Path ./AvaloniaIconToolDLL/CppBuild -Destination ./Build/Win64
