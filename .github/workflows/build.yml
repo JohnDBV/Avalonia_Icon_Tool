@@ -25,4 +25,4 @@ jobs :
               uses: microsoft/setup-msbuild@v2
             
             - name: Build C++ binaries for Debug
-              run: msbuild ..\AvaloniaIconToolDLL\AvaloniaIconToolDLL.vcxproj /p:configuration=debug /p:platform=x64
+              run: msbuild ./AvaloniaIconToolDLL/AvaloniaIconToolDLL.vcxproj /p:configuration=debug /p:platform=x64
