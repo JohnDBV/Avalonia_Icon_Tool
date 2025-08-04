@@ -24,8 +24,4 @@
   <ItemGroup>
     <ProjectReference Include="..\AvaloniaIconTool\AvaloniaIconTool.csproj" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy $(SolutionDir)\CppBuild $(SolutionDir)AvaloniaIconTool.Desktop\bin\$(Configuration)\net9.0 /s /y" />
-  </Target>
 </Project>
