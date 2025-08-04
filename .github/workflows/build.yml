@@ -17,3 +17,6 @@ jobs :
             
             - name: Install dependencies for Desktop version
               run: dotnet restore ./AvaloniaIconTool/AvaloniaIconTool.Desktop/AvaloniaIconTool.Desktop.csproj
+
+            - name: Build the Avalonia Windows project
+              run: dotnet build AvaloniaIconTool.Desktop --configuration Debug --arch x64 --output .\Build\Win64
