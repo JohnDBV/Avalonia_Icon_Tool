@@ -28,7 +28,7 @@ jobs :
               run: msbuild ./AvaloniaIconToolDLL/AvaloniaIconToolDLL.vcxproj /p:configuration=debug /p:platform=x64
 
             - name: Copy C++ binaries to C# Output folder
-              run : Copy-Item -Path ./AvaloniaIconToolDLL/CppBuild/* -Destination ./AvaloniaIconTool/Build/Win64
+              run : Copy-Item -Verbose -Path ".\AvaloniaIconToolDLL\CppBuild\*" -Destination ".\AvaloniaIconTool\Build\Win64"
 
             - name: Upload the build folder
               uses: actions/upload-artifact@v4
